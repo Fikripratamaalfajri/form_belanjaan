@@ -103,12 +103,17 @@
 <?php
 $customer = $_GET['nama'];
 $belanjaan = $_GET['radio'];
-$jumlah = $_GET['jumlahss'];
+$jumlah = $_GET['jumlah'];
 echo '<br/>Customer : ' . $customer;
 echo '<br/>Produk  : ' . $belanjaan;
 echo '<br/>Jumlah : ' . $jumlah;
 
-if ($belanjaan  == "Telivisi" ) {
-  echo "total harga:".$jumlah.4500000;
+switch ($belanjaan) {
+  case "Televisi" . $total = $jumlah * 4500000;
+    echo "harga televisi adalah :" . $total;
+  case "Kulkas" . $total = $jumlah * 4500000;
+    echo "harga televisi adalah:" . $total;
+  case "Mesin Cuci" . $total = $jumlah * 4500000;
+    echo "harga televisi adalah." . $total;
 }
 ?>
